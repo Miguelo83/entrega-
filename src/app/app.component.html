@@ -1,0 +1,27 @@
+<!-- Creates a layout with a left-positioned sidenav and explicit content. -->
+<mat-sidenav-container>
+  <mat-sidenav #sidenav mode="push">
+    <mat-toolbar primary="color">
+      Menu
+    </mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item routerLink="home">Home</a>
+      <a mat-list-item routerLink="company">Company</a>
+      <!-- <a mat-list-item routerLink="contact">Contact</a> -->
+      <a mat-list-item routerLink="shearch"> Api Wiki</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <app-toolbar (toggleSidenav)="sidenav.toggle()"></app-toolbar>
+    <!--declaramos el metodo onSerach creado en el ts shearch que activara el metodo onSearch con en event-->
+    <router-outlet></router-outlet>
+    
+    <!-- <app-shearch (onSerach)="onSerach($event)"></app-shearch>
+   
+    <ng-container *ngFor="let article of article$ | async">
+      <app-articles [article]="article" ></app-articles>
+    </ng-container> -->
+    <app-footer></app-footer>
+  </mat-sidenav-content>
+
+</mat-sidenav-container>

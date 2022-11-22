@@ -1,0 +1,29 @@
+<mat-toolbar>
+    <button mat-icon-button (click)="onToggleSidenav()">
+        <mat-icon>menu</mat-icon>
+    </button>
+
+    <span class="example-spacer"></span>
+
+    <a *ngIf="isLogged | async;else viewLogout" mat-icon-button (click)="onLogout()">
+        <mat-icon>
+            <span class="material-symbols-outlined">
+                logout
+            </span>
+        </mat-icon>
+    </a>
+    {{isLogged | async}}
+    <ng-template #viewLogout>
+        <a mat-icon-button [routerLink]="'./login'">
+            <mat-icon>
+                <span class="material-symbols-outlined">
+                    account_circle
+                </span>
+            </mat-icon>
+        </a>
+    </ng-template>
+
+
+
+
+</mat-toolbar>

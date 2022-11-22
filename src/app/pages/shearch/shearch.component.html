@@ -1,0 +1,13 @@
+<ng-container >
+    <header>
+        <mat-toolbar color="primary">
+            <span>Search</span>
+        </mat-toolbar>
+    </header>
+    <form [formGroup]="FrmSherch" class="frmSherch">
+        <mat-form-field class="full-width-input separator" color="accent">
+            <mat-label>Buscar</mat-label>
+            <input matInput placeholder="Angular" formControlName="search" type="text" required>
+        </mat-form-field>
+    </form>
+</ng-container>

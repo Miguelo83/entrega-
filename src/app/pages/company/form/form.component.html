@@ -1,0 +1,35 @@
+<ng-container>
+    <form action="" [formGroup]="form">
+        <p>
+            <mat-form-field appearance="legacy">
+                <mat-label>Company</mat-label>
+                <input matInput placeholder="Placeholder" placeholder="Company" formControlName="company_name">
+                <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="legacy">
+                <mat-label>rut</mat-label>
+                <input matInput placeholder="Placeholder" placeholder="Company" formControlName="company_rut">
+                <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="legacy">
+                <mat-label>Direccion</mat-label>
+                <input matInput placeholder="Placeholder" placeholder="Company" formControlName="dir">
+                <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+            </mat-form-field>
+        </p>
+
+    </form>
+    <mat-dialog-actions>
+        <button mat-button mat-dialog-close (click)="close()">Cancel</button>
+        <!-- The mat-dialog-close directive optionally accepts a value as a result for the dialog. -->
+        <button mat-raised-button type="submit" color="primary" [mat-dialog-close]="form.value"
+        [disabled]="form.invalid">Save</button>
+    </mat-dialog-actions>
+
+
+
+</ng-container>
